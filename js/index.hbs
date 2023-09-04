@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Styleguide</title>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+        <link rel="stylesheet" type="text/css" href="/_styleguide/index.css">
+        <script type="application/javascript" src="/_styleguide/index.js"></script>
+    </head>
+    <body class="StyleguideBody">
+        <header class="StyleguideHeader">
+            <h1 class="StyleguideTitle">Styleguide</h1>
+        </header>
+
+        <nav class="StyleguideNavigation">
+            <h2 class="StyleguideNavigation-title">Examples</h2>
+            <div class="StyleguideNavigation-content">
+                <ul class="StyleguideGroups">
+                    {{#each groups}}
+                        <li>
+                            <h3 class="StyleguideGroups-name">{{name}}</h3>
+                            <ul class="StyleguideGroups-examples">
+                                {{#each examples}}
+                                    <li class="StyleguideGroups-examples-example"><a class="StyleguideGroups-examples-link" href="{{url}}" title="{{name}}" target="StyleguideExample" {{#if source}}data-source='{{{jsonObject source}}}'{{/if}}>{{name}}<i class="StyleguideGroups-examples-externalLink" title="Open Example in a New Window"></i></a>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </nav>
+
+        <div class="StyleguideContent">
+          <iframe class="StyleguideExample" name="StyleguideExample" src="about:blank"></iframe>
+        </div>
+
+    </body>
+</html>
