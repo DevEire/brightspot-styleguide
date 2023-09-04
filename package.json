@@ -35,7 +35,7 @@
     "moment": "^2.29.4",
     "normalize.css": "^3.0.3",
     "prismjs": "^1.29.0",
-    "systemjs-builder": "0.15.32",
+    "systemjs-builder": "0.16.15",
     "terminal-kit": "^3.0.0",
     "through2": "2.0.3",
     "traverse": "^0.6.6",
