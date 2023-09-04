@@ -1,9 +1,0 @@
-{
-    "_template": "Commenting",
-    "item": {
-        "_dataUrl": "comment.json",
-        "reply": {
-            "_dataUrl": "comment.json"
-        }
-    }
-}

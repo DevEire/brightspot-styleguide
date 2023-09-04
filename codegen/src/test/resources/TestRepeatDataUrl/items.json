@@ -1,9 +1,0 @@
-{
-    "_template": "templates/list",
-    "items": [
-        {
-            "_dataUrl": "/item.json",
-            "_repeat": [ 1, 5 ]
-        }
-    ]
-}
