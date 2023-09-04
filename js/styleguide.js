@@ -159,10 +159,6 @@ module.exports = function Styleguide (gulp, configOverrides = { }) {
   // Process options in case this needs to run in the background.
   process.title = config.title || 'styleguide'
 
-  if (config.daemon) {
-    require('daemon')()
-  }
-
   // Expose common paths.
   this.path = {
     build: () => config.build,
