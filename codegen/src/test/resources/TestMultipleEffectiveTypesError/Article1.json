@@ -1,7 +1,0 @@
-{
-    "_template": "Article",
-    "title": "This is a string",
-    "related": {
-        "_dataUrl": "Article2.json"
-    }
-}

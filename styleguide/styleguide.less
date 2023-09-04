@@ -1,0 +1,270 @@
+@menu-width: 300px;
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 54px 0 20px 0;
+    padding: 0;
+    .clearfix();
+}
+
+a {
+    color: #259acd;
+    text-decoration: none;
+}
+
+.sg-header {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    background: #20343f;
+    border-bottom: #38b5dc solid 6px;
+
+    > * {
+        padding: 12px 24px;
+        box-sizing: border-box;
+    }
+}
+
+.sg-header-title {
+    flex-grow: 1;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    height: 48px;
+    margin: 0;
+}
+
+.sg-header-controlbar {
+    flex-grow: 0;
+
+    > * {
+        display: inline-block;
+    }
+}
+
+.sg-control-available-device-list {
+    a {
+        color: white;
+        margin-left: 6px;
+        opacity: 0.5;
+
+        &.sg-control-available-device-selected {
+            opacity: 1;
+        }
+    }
+}
+
+.sg-control-available-stylesheet-list {
+    margin-left: 24px;
+}
+
+.sg-menu {
+    box-sizing: border-box;
+    float: left;
+    padding: 12px 12px 12px 24px;
+    width: @menu-width;
+}
+
+.sg-library-list {
+    margin-bottom: 24px;
+
+    select {
+        width: 100%;
+    }
+}
+
+.sg-group-list {
+    list-style: none;
+    margin: 0 0 12px 0;
+    padding: 0;
+}
+
+.sg-group-name {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.sg-example-list {
+    list-style: none;
+    margin: 0 0 12px 0;
+    padding: 0;
+
+    ul {
+       list-style: none;
+       margin: 0 0 12px 12px;
+       padding: 0;
+    }
+}
+
+.sg-content {
+    margin: 0 0 0 @menu-width;
+    padding: 12px 24px 12px 12px;
+}
+
+.sg-file-header,
+.sg-design-header {
+    background: #20343f;
+    color: white;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    z-index: 50;
+}
+
+.sg-file-name {
+    font-weight: bold;
+}
+
+.sg-file-form,
+.sg-design-form {
+    padding: 12px 0;
+
+    button {
+        color: black;
+        margin-top: 12px;
+    }
+
+    .sg-file--hide &,
+    .sg-design--hide & {
+        display: none;
+    }
+}
+
+.sg-file-form-message,
+.sg-design-form-message {
+    margin-left: 16px;
+}
+
+.sg-file-option-list {
+    margin: 12px 0;
+}
+
+.sg-file-body {
+    background-image: linear-gradient(-45deg,#f1f1f1,#f1f1f1 25%,#e9e9e9 25%,#e9e9e9 50%,#f1f1f1 50%,#f1f1f1 75%,#e9e9e9 75%);
+    background-size: 50px 50px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    padding: 24px;
+
+    iframe {
+        border: none;
+        display: block;
+        height: 0;
+        width: 100%;
+    }
+}
+
+.sg-device {
+    float: left;
+    margin-right: 24px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    iframe {
+        height: 100%;
+    }
+}
+
+.sg-device-name {
+    margin-bottom: 12px;
+}
+
+.sg-design-name {
+    font-weight: bold;
+}
+
+.sg-design-description {
+    border-top: 1px solid #ddd;
+    margin: 30px 0 12px 0;
+
+    &:first-of-type {
+        margin-top: 12px;
+    }
+
+    p {
+        margin: 12px 0;
+    }
+}
+
+.sg-design-item {
+    margin-bottom: 12px;
+}
+
+.sg-design-item-type {
+    background: fade(black, 10%);
+    border-radius: 2px;
+    display: inline;
+    font-size: 14px;
+    padding: 0 6px;
+}
+
+.sg-design-item-name {
+    display: inline;
+}
+
+.sg-design-item-value {
+    background: #f9f2f4;
+    color: #c7254e;
+    display: inline;
+    font-family: monospace, monospace;
+    padding-right: 5px;
+
+    &:before {
+        content: ' - ';
+        background: white;
+        color: black;
+        margin-right: 5px;
+    }
+}
+
+.sg-design-item-example {
+    background: #efefef;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.sg-space-example {
+    background: black;
+    height: 1px;
+    width: 300px;
+}
+
+.sg-border-example {
+    background: white;
+    height: 10px;
+    width: 300px;
+}
+
+.sg-type-example {
+    line-height: 1.4;
+}
+
+.sg-color-example {
+    background: black;
+    border-radius: 100%;
+    border: 1px solid #999;
+    display: inline-block;
+    height: 25px;
+    margin-right: 0.5rem;
+    position: relative;
+    top: 8px;
+    width: 25px;
+}

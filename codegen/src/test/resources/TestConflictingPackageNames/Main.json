@@ -1,9 +1,0 @@
-{
-    "_template": "Main.hbs",
-    "main1": {
-        "_template": "foo/bar-baz/Main.hbs"
-    },
-    "main2": {
-        "_template": "foo/bar_baz/Main.hbs"
-    }
-}

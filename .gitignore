@@ -1,8 +1,6 @@
 bower_components
 node
-node_modules/**/*
-example/node_modules/**/*
-node_modules/*
-.idea/*
+node_modules
 target
+
 test-reports.xml

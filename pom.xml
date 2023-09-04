@@ -9,146 +9,52 @@
     <parent>
         <groupId>com.psddev</groupId>
         <artifactId>dari</artifactId>
-        <version>3.3-SNAPSHOT</version>
+        <version>3.2.2272-34adce</version>
     </parent>
 
+    <groupId>com.psddev</groupId>
     <artifactId>styleguide-parent</artifactId>
-    <version>2.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>BrightSpot Styleguide - Parent</name>
+    <name>BrightSpot Styleguide</name>
 
     <modules>
-        <module>codegen</module>
-        <module>maven-plugin</module>
+        <module>viewgenerator</module>
+        <!-- <module>test</module> -->
     </modules>
-
-    <profiles>
-        <profile>
-            <id>yarn</id>
-
-            <activation>
-                <file>
-                    <exists>yarn.lock</exists>
-                </file>
-            </activation>
-
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.github.eirslett</groupId>
-                        <artifactId>frontend-maven-plugin</artifactId>
-                        <version>1.2</version>
-
-                        <executions>
-                            <execution>
-                                <id>install-node-and-yarn</id>
-                                <phase>generate-resources</phase>
-                                <goals>
-                                    <goal>install-node-and-yarn</goal>
-                                </goals>
-                                <configuration>
-                                    <nodeVersion>v6.9.1</nodeVersion>
-                                    <yarnVersion>v0.16.1</yarnVersion>
-                                </configuration>
-                            </execution>
-
-                            <execution>
-                                <id>yarn-cache-clean</id>
-                                <goals>
-                                    <goal>yarn</goal>
-                                </goals>
-                                <configuration>
-                                    <arguments>cache clean</arguments>
-                                </configuration>
-                            </execution>
-
-                            <execution>
-                                <id>yarn</id>
-                                <goals>
-                                    <goal>yarn</goal>
-                                </goals>
-                                <configuration>
-                                    <arguments>--pure-lockfile</arguments>
-                                </configuration>
-                            </execution>
-
-                            <execution>
-                                <id>gulp</id>
-                                <goals>
-                                    <goal>gulp</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>com.psddev</groupId>
                 <artifactId>dari-util</artifactId>
-                <version>3.3-SNAPSHOT</version>
+                <version>3.2.2272-34adce</version>
             </dependency>
 
             <dependency>
                 <groupId>com.psddev</groupId>
                 <artifactId>cms-db</artifactId>
-                <version>3.3-SNAPSHOT</version>
+                <version>3.2.6238-6e3773</version>
             </dependency>
 
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>2.0.9</version>
+                <version>1.7.12</version>
             </dependency>
 
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
-                <version>2.13.0</version>
-            </dependency>
-
-            <dependency>
-                <groupId>javax.json</groupId>
-                <artifactId>javax.json-api</artifactId>
-                <version>1.1.4</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.glassfish</groupId>
-                <artifactId>javax.json</artifactId>
-                <version>1.1.4</version>
+                <version>2.4</version>
             </dependency>
 
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.13.2</version>
+                <version>4.12</version>
                 <scope>test</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.maven</groupId>
-                <artifactId>maven-core</artifactId>
-                <version>3.9.4</version>
-                <scope>provided</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.maven</groupId>
-                <artifactId>maven-plugin-api</artifactId>
-                <version>3.9.4</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.maven.plugin-tools</groupId>
-                <artifactId>maven-plugin-annotations</artifactId>
-                <version>3.9.0</version>
-                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -186,3 +92,4 @@
     </distributionManagement>
 
 </project>
+
